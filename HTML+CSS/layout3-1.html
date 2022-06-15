@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .topbar a {
+            list-style-type: none;
+            text-transform: none;
+            color: #FFFFFF
+        }
+        
+        .container-fluid {
+            float: left
+        }
+        
+        .topbar {
+            margin-top: 13px;
+        }
+        
+        .topbar-right {
+            float: right;
+        }
+        
+        .home {
+            margin-left: 30px;
+        }
+        
+        .home a {
+            color: #000;
+        }
+        
+        .topbar-right li {
+            display: none
+        }
+        
+        .main {
+            margin-top: 20px;
+        }
+        
+        .fa-signal {
+            display: block;
+            font-size: 24px;
+        }
+        
+        .sibar {
+            margin: 10px;
+            padding: 0px;
+        }
+        
+        .tip {
+            float: left;
+            margin-left: 20px;
+        }
+        
+        .sibar-left {
+            margin-left: 10px;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        
+        .sibar-left span {
+            margin-top: 10px;
+        }
+        
+        .main-menu {
+            margin-top: 10px;
+        }
+        
+        .fooder {
+            color: #C8CCCD;
+            float: left;
+            position: relative;
+            font-size: 18px;
+            clear: both;
+            margin-top: 20px;
+        }
+        
+        .main-menu img {
+            width: 16%;
+            border-radius: 100%;
+            float: left;
+        }
+        /*.tip-left {
+	margin-left: 20px;
+}*/
+        
+        .fa-cog {
+            float: right;
+            color: #FFF;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        
+        .tip-menu {
+            clear: both;
+        }
+        
+        .fa-angle-right {}
+        
+        body {
+            background: #F5F5F5
+        }
+        
+        .contact {
+            border: solid 1px #E1E1E1;
+        }
+        
+        .icon {
+            color: #FFF;
+            float: left
+        }
+        
+        .contact-menu {
+            padding: 15px;
+        }
+        
+        .contact-menu ul li {
+            float: left;
+            list-style-type: none;
+            margin-right: 8px;
+        }
+        
+        .heading-left {
+            float: left
+        }
+        
+        .heading-right {
+            float: right;
+        }
+        
+        .search {
+            position: relative;
+        }
+        
+        .fa-search {
+            position: absolute;
+            right: 25px;
+            margin-top: 7px;
+        }
+        
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .table {
+            border: solid 1px #E1E1E1;
+            font-size: 14px
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").click(function() {
+                $("li").toggle();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row topbar">
+            <div class="col-sm-10 col-md-10 "></div>
+            <div class="col-sm-2 col-md-2 text-right d-inline-block">
+                <a href="#"> <i class="fa fa-comments-o" style="font-size:20px;"></i> </a>
+                <ul class="topbar-right">
+                    <a href="#" class="dropdown"> <span>Admin</span> <i class="fa fa-angle-down"></i>
+                        <li>1</li>
+                        <li>2</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blog">
+        <div class="row main">
+            <div class="col-6">
+                <h5><i class="fa fa-arrow-circle-o-left" style="color:#333C5E"></i>&nbsp;&nbsp;Danh sách khách hàng</h5>
+                <div class="row">
+                    <div class="col-8 home"><a href="">Home</a> <a href=""><i class="fa fa-angle-right"></i></a> <a href="">Danh sách khách hàng</a></div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-4">
+                        <a href="next" class="btn btn-right"> <i class="fa fa-signal"></i> <span>Thêm khách hàng</span> </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="next" class="btn btn-right"> <i class="fa fa-signal"></i> <span>Thêm hàng od</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid blog">
+        <div class="row sibar">
+            <div class="col-3 bg-dark text-white sibar-left"> <span>Main sidebar <a href="#"><i class="fa fa-angle-down" style="float:right;margin-top:3px;color:#FFF"></i></a></span>
+                <div class="main-menu">
+                    <a href="#"><img src="images/6eaf1a844ae4b6fa6eeb6ff17f468cc0.jpg" /></a>
+                    <div class="tip"> <span class="tip-left">Nguyễn Văn Bình</span>
+                        <p class="tip-left"><i class="fa fa-file-text-o">&nbsp;&nbsp;&nbsp;admin</i></p>
+                    </div>
+                    <a href="#"><i class="fa fa-cog"></i></a> </div>
+                <div class="tip-menu text-left"> <span style="float:left;">Main</span> <a href="#" class="fooder"><i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Trang chủ</a> <a href="#" class="fooder"><i class="fa fa-database"></i>&nbsp;&nbsp;&nbsp;Khách hàng<i class="fa fa-angle-right" mid="1"></i></a>                    <a href="#" class="fooder"><i class="fa fa-file-o"></i>&nbsp;&nbsp;&nbsp;Đơn hàng&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" mid="2"></i></a> </div>
+            </div>
+            <div class="col-8 bg-light contact">
+                <div class="contact-menu">
+                    <div class="heading-left">Danh sách khách hàng</div>
+                    <div class="heading-right">
+                        <ul class="icon">
+                            <li class="icon-reload"><a href=""><i class="fa fa-chevron-down text-body"></i></a></li>
+                            <li class="icon-reload"><a href=""><i class="fa fa-repeat text-body"></i></a></li>
+                            <li class="icon-reload"><a href=""><i class="fa fa-times text-body"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th>Filter: </th>
+                            <th>
+                                <div class="search">
+                                    <form id="search-type" name="search-type" method="post">
+                                        <input id="type" placeholder="type to filter...." /><i class="fa fa-search"></i>
+                                    </form>
+                                </div>
+                            </th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TT</td>
+                            <td>Họ và tên</td>
+                            <td>Điện thoại</td>
+                            <td>Địa chỉ</td>
+                            <td>Fb</td>
+                            <td>Trạng thái</td>
+                            <td>Action</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Phạm Văn Cương</td>
+                            <td>0987813788</td>
+                            <td>HD</td>
+                            <td><a href="">Phạm Văn Cương</a></td>
+                            <td>Cần cọc</td>
+                            <td>Action</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Phạm Văn Cương</td>
+                            <td>0987813788</td>
+                            <td>HD</td>
+                            <td><a href="">Phạm Văn Cương</a></td>
+                            <td>Cần cọc</td>
+                            <td>Action</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

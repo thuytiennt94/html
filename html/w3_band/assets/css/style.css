@@ -1,0 +1,269 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li a {
+    text-decoration: none;
+}
+
+#header {
+    background-color: black;
+    width: auto;
+    height: 46px;
+}
+
+.header-menu li {
+    margin-left: 0px;
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.header-menu>li>a {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.header-menu li a {
+    color: #FFF;
+    padding: 0px 24px;
+    line-height: 46px;
+}
+
+.header-menu>li:hover>a {
+    /*background-color: #FFF;*/
+    color: black;
+    display: block;
+    background-color: #FFF;
+}
+
+.header-menu li:hover .header-top {
+    display: block;
+}
+
+.header-top li:hover a {
+    /*background-color: #FFF;*/
+    color: black;
+    display: block;
+    background-color: #FF0;
+}
+
+.header-menu .header-top {
+    position: absolute;
+    display: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.header-menu .header-top li {
+    margin: 0px;
+    width: 100%;
+}
+
+.header-menu .header-top a {
+    color: #000;
+}
+
+.header-top li a {
+    line-height: 46px;
+}
+
+.header-top li {
+    background-color: #FFF;
+}
+
+.fa-search {
+    float: right;
+    padding: 14px 24px;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.fa-search:hover {
+    background-color: #ff0000;
+    color: #000;
+}
+
+
+/* #slider {
+    padding-top: 50%;
+    margin-top: 24px;
+}*/
+
+.slider img {
+    width: 100%;
+    height: 674.5px;
+    position: relative;
+    display: block;
+}
+
+.slider .text-slider {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.text-slider {
+    bottom: 0px;
+    color: #ff0000;
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    top: 200%;
+}
+
+.text-slider>h3 {
+    margin: 20px;
+}
+
+#content {
+    box-sizing: inherit;
+    text-align: center;
+    padding-top: 20px;
+    width: 768px;
+    margin-top: 20px
+}
+
+#content>h3 {
+    line-height: 25px;
+    letter-spacing: 10px;
+}
+
+#content .template {
+    color: darkgray;
+}
+
+#content .justify {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#content .list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#content .list-main {
+    float: left;
+    margin-top: 25px;
+}
+
+#content .list-main p {
+    font-size: 15px;
+}
+
+#content .list-main img {
+    width: 60%;
+    margin-top: 20px;
+}
+
+.tour-menu {
+    background-color: #000;
+    color: #FFF;
+    float: left;
+    display: block;
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+	
+}
+
+.tour {
+    max-width: 800px;
+}
+
+.tour>h2{
+    margin-top: 50px;
+	font-size:30px;
+	font-weight:400;
+}
+.tour >p {
+    margin-top: 20px;
+	color:#999999;
+	font-size:16px;
+}
+
+.ticket-tour li {
+    float: left;
+    text-decoration: dotted;
+    border: 1px solid #FF0;
+    display: block;
+    clear: both;
+    width: 778px;
+    text-align: left;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #FFF;
+    color: #757575;
+}
+
+.ticket-tour span {
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    padding: 3px;
+    font-size: 15px;
+    color: #FFF;
+}
+
+.ticket-tour-right {
+    float: right;
+    background-color: #000!important;
+    border: 1px solid #000!important;
+    border-radius: 50%;
+    width: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.country {
+    max-width: 820px!important;
+	float:left;
+	padding-right:8px;
+	padding-top:30px;
+	width:102%;
+	margin-bottom:100px;
+}
+
+.country img {
+	width: 100%;
+}
+.menu-country{
+	float:left;
+	width:31.333333%;
+	color:#000;
+	margin-right:15px;
+	}
+.main-content{
+	background-color:#FFF;
+	text-align:left;
+	padding-left:10px;
+	padding-top:10px;
+	padding-bottom: 20px;
+	}
+.main-content>p{
+	margin:8px;
+	
+}
+.main-content button{
+	text-align:center;
+	background-color:#000;
+	color:#FFF;
+	padding:10px;
+	font-size:14px;
+}
+.country-date{color:#656565;
+	font-size:14px;
+	}
+
+/*#footer {
+    
+    background-color: aquamarine;
+    height: 30px;
+}*/

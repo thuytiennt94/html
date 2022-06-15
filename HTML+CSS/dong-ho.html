@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Đồng hồ</title>
+<script language="javascript">
+function HienthiDongHo()
+{
+	//var t = new Date("04/20/1990 05:30:20");
+	var time = new Date();//tạo đối tượng Date với giá trị là tgian hiện tại
+	gio = time.getHours();
+	gio = gio<10?("0", gio) : gio;
+	phut = time.getMinutes();
+	phut = phut<10?("0", phut) : phut;
+	giay = time.getSeconds();
+	str = gio + ":" + phut + ":" + giay;
+	document.getElementById("dongho").innerHTML = str;
+	window.setTimeout("HienthiDongHo();",1000);
+}
+</script>
+</head>
+
+<body>
+Bây giờ là: <span id="dongho">...</span>
+<script language="javascript">
+HienthiDongHo();
+</script>
+</body>
+</html>

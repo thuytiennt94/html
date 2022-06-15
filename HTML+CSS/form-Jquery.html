@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login form-jquery</title>
+<script src="javascript/jquery-3.6.0.min.js"></script>
+<link href="form-Jquery1.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	$(document).ready(function(){
+		$("#frmLogin").submit(function(){
+			if($("#txtusername").val()==""){
+				$("#error-username").html("This field is required");
+				$("#error-username").css("color","#F0F");
+				$("#txtusername").focus();
+				return false;
+			}
+			if($("#txtusername").val().length <= 2){
+				$("#error-username").html("please enter at least 2 characters.");
+				$("#error-username").css("color","#F00");
+				$("#txtusername").focus();
+				return false;
+			}
+			if($("#txtpassword").val()==""){
+				$(".error-password").html("This field is required. ");
+				$("#txtpassword").focus();
+				return false;
+			}
+			if($("#txtpassword").val().length<=8){
+				$(".error-password").html("please enter at least 8 characters.");
+				$("#txtpassword").focus();
+				return false;
+			}
+			
+			if($("#cbxnoiquy").is(':checked')){
+				alert("Đã check");
+			}else{
+				alert("Chưa check");
+			}
+			//alert($("#cbxnoiquy").val());
+			alert("OK");
+			return false;
+		});
+	});
+</script>
+</head>
+
+<body>
+<div class="nav">
+	<p class="login">Login form</p>
+	<div class="main-menu">
+		<form id="frmLogin" name="frmLogin" method="post" >
+			<fieldset class="box-login">
+				<legend>Sign into your account</legend>
+				<div class="main">
+					<p class="test">Please enter tour name and password to log in</p>
+					<p class="name"><i class="fa fa-user"></i>
+						<input type="text" name="txtusername" id="txtusername" placeholder="Usename" />
+					</p>
+					<div id="error-username" class="error"></div>
+					<p class="name"><i class="fa fa-lock"></i>
+						<input type="password" name="txtpassword" id="txtpassword" placeholder="Passwword" />
+					</p>
+					<div class="error error-password"></div>
+					<p id="check"><input type="checkbox" name="cbxnoiquy" id="cbxnoiquy"  /> Keep me signed in</p>
+						<button type="submit" id="txtsubmit" value="" />Login <i class="fa fa-chevron-circle-right"></i></button>
+					<p class="final">Don't have an account yet? <a href="">Create an account</a></p>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+</body>
+</html>

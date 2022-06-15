@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Đăng ký</title>
+</head>
+
+<body>
+<h2> Đăng ký thành viên</h2>
+<!--action="" thì submit sẻ gửi dữ liệu tới chính trang hiện tại-->
+<form name="f1" id="f1" action="">
+<p> Họ tên: <input type="text" name="a1"  placeholder="Nhập họ tên"> </p>
+<p> Email: <input type="text" name="t2" id="t2" placeholder="abc@tenmien.com"></p>
+<!-- radio là hộp chọn nhóm loại trừ nhau: Các radio cùng nhóm phải có name = nhau-->
+<p> Giới tính:
+	Nam: <input type="radio" name="rGioitinh"  value="Male">
+    Nữ: <input type="radio" name="rGioitinh" value="Female">
+</p>
+<p>
+	Sở thích:
+    Thể thao <input type="checkbox" name="c1"  value="Sport">
+    Nghe nhạc <input type="checkbox" name="c2" value="Music">
+</p>
+<p>
+	Ngành học:
+	<select name="s1" id="s1" size="1">
+    	<option value=""> Chọn ngành học</option>
+    	<option value="IT"> Công nghệ thông tin</option>
+        <option value="English">Ngoại ngữ - Tiếng Anh</option>
+        <option value="Economic"> Kinh tế</option>
+		<option value="Economic"> Kinh tế</option>
+		<option value="Economic"> Kinh tế</option>
+		<option value="Economic"> Kinh tế</option>
+    </select>
+</p>
+<p>
+	Giới thiệu:<br>
+     <textarea name="t3" id="t3" rows="50" cols="50"></textarea>
+</p>
+<p>
+	<input type="submit" name="b1" id="b1" value="Đồng ý">
+    <input type="reset" name="b2" id="b2" value="Nhập lại">
+</p>
+</form>
+</body>
+</html>

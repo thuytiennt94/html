@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>TABS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$(".tabs").click(function(){
+			$id_da_click = $(this).attr("name");
+			$(".content").hide();
+			$("."+$id_da_click).show();
+			
+			return false;
+		});
+	});
+</script>
+<style>
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+a:hover{
+	cursor:pointer
+}
+</style>
+<body>
+<div class="menu">
+	<div class="main">
+	<ul>
+		<li><a class="tabs" name="tabs-one">First</a></li>
+		<li><a class="tabs" name="tabs-two">Second</a></li>
+		<li><a  class="tabs" name="tabs-three">Thire</a></li>
+	</ul>
+	</div>
+	<div class="content tabs-one show">
+		Bài tập 1:
+	</div>
+	<div class="content tabs-two hide">
+		Bài tập 2:
+	</div>
+	<div class="content tabs-three hide">
+		Bài tập 3:
+	</div>
+</div>
+</body>
+</html>

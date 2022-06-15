@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body  ng-app="myApp">
+<h3>Bài tập thực hành</h3>
+<div ng-controller="personYou">
+	<table>
+		<thead>
+			<tr>
+				<td width="100px">firstName</td>
+				<td width="100px">lastName</td>
+				<td width="100px">fullName</td>
+				<td width="100px">tuổi</td>
+			</tr>
+			<tr ng-repeat="employer in employers">
+				<td>{{employer.firstName}}</td>
+				<td>{{employer.lastName}}</td>
+				<td>{{employer.firstName + "  " +employer.lastName}}</td>
+				<td>{{employer.age}}</td>
+			</tr>
+		</thead>
+	</table>
+</div>
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('personYou', personYou);
+	function personYou($scope){
+		var employers =[
+			{firstName:"A", lastName:"han",age:"5" },
+			{firstName:"manion", lastName:"lia",age:"9" },
+			{firstName:"snon", lastName:"honnn",age:"4" },
+		];
+		$scope.employers = employers;
+	}
+</script>
+</body>
+</html>

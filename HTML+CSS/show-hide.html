@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="javascript/jquery-3.6.0.min.js"></script>
+<title>Untitled Document</title>
+
+<script language="javascript">
+$(document).ready(function() {
+	$(".a-an").click(function(){
+		an();
+	});
+	$(".a-hienthi").click(function(){
+		hienthi();
+	});
+	
+	
+});
+
+function hienthi(){
+	$("#test").slideDown(1000);
+}
+function an(){
+	$("#test").slideUp(1000);
+}
+
+</script>
+<style type="text/css">
+#test, #test2{
+	background:#F00;
+	height:200px;
+	width:300px;
+}
+</style>
+</head>
+
+<body>
+<div id="test">&nbsp;&nbsp;&nbsp;&nbsp;1</div> &nbsp;&nbsp;
+<div id="test2">&nbsp;&nbsp;2</div>
+<a class="a-hienthi" href="#">Hiển thị</a>&nbsp;&nbsp;
+<a class="a-an" href="#">Ẩn</a>
+</body>
+</html>

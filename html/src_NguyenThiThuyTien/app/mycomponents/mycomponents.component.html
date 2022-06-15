@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="banner" style="color: aliceblue; background-color: rebeccapurple; text-align: center; font-size: 18px; padding: 5px;">
+        <h1>
+            My exam-Book Manager
+        </h1>
+    </div>
+    <form (submit)="addMon()" #myform="ngForm">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" id="id" name="id" class="form-control" [(ngModel)]="id" readonly>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" required>
+            <span *ngIf="name==''" class="errorAlert">Bạn chưa nhập tên</span>
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content" class="form-control" [(ngModel)]="content" required>
+            <span *ngIf="content==''" class="errorAlert">Bạn chọn môn</span>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" id="category" name="category" [(ngModel)]="category">
+              <option value="1">Semester1</option>
+              <option value="2">Semester2</option>
+              <option value="3">Semester3</option>
+              <option value="4">Semester4</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label><b>Available</b></label><br>
+            <input type="checkbox" name="status" id="status" [(ngModel)]="status">
+        </div>
+        <button type="submit " class="btn btn-success " [disabled]="!myform.form.valid ">Gửi</button>
+    </form>
+    <div>
+        <h2>List book</h2>
+    </div>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Content</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let mh of listDS">
+            <td>{{mh.id}}</td>
+            <td>{{mh.name}}</td>
+            <td>{{mh.content | uppercase}}</td>
+            <td>{{mh.category}}</td>
+            <td>
+                <div *ngIf="mh.status==true"><input type="checkbox" name="" id="" checked="checked"></div>
+                <div *ngIf="mh.status==false"><input type="checkbox" name="" id=""></div>
+            </td>
+            <td>
+                <button class="btn btn-warning" style="margin-right: 4px;" (click)="updateMH(mh.id, mh.name, mh.content, mh.category, mh.status)">Sửa</button>
+                <button type="button" class="btn btn-danger" (click)="XoaSP(mh.id)">Xoá</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    $(document).ready(function() {
+        $(".btn-warning").slideUp(2000);
+    });
+</script>

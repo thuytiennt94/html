@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>phép tính - radio</title>
+<script language="javascript">
+function dongy()
+{
+	//kiểm tra chọn radio chưa?
+	//Cách 1: r = document.tenForm.tenRadio;
+	//r = document.form1.r;
+	//Cách 2:r = document.getElementsByName("tenRadio");
+	r = document.getElementsByName("r");
+	pheptoan="";//khởi tạo phép toán = rỗng
+	for(i=0; i<r.length;i++)
+	{
+		if(r[i].checked)//nếu phần tử thử i được chọn
+		{
+			pheptoan=r[i].value;
+			break;//thoát khỏi vòng lặp tìm kiếm
+		}
+	}	
+	if(pheptoan=="")
+		alert("bạn chưa chọn phép toán nào");
+	else
+		//alert("Phép toán: " + pheptoan);
+		Tinh(pheptoan);
+}
+</script>
+<script language="javascript">
+function kiemtra()
+{
+	ta = document.getElementById("ta");
+	tb = document.getElementById("tb");
+	loia = document.getElementById("loia");
+	loib = document.getElementById("loib");
+	if(ta.value=="")
+	{
+		loia.innerHTML = "A chưa nhập";
+		ta.focus();
+		return false;
+	}
+	else
+		loia.innerHTML = "";
+	//kiểm tra a ở dạng số
+	if(isNaN(ta.value))//nếu a không phải số
+	{
+		loia.innerHTML = "A phải là số";
+		ta.select();
+		return false;
+	}
+	else
+		loia.innerHTML = "";
+		
+	if(tb.value=="")
+	{
+		loib.innerHTML = "B chưa nhập";
+		tb.focus();
+		return false;
+	}
+	else
+		loib.innerHTML = "";
+	//kiểm tra b ở dạng số
+	if(isNaN(tb.value))
+	{
+		loib.innerHTML = "B phải là số";
+		tb.select();
+		return false;
+	}
+	else
+		loib.innerHTML = "";	
+
+	return true;
+}
+//hàm Tinh(pheptoan): nhận tham số pheptoan là 
+//chuỗi chứa ký tự "+", "-", "*" hoặc "/"
+function Tinh(pheptoan)
+{
+	if(kiemtra()==false)
+		return false;
+	//lấy giá trị của các textfield
+	a = document.getElementById("ta").value;
+	b = document.getElementById("tb").value;
+	//tính toán
+	n1 = parseFloat(a); n2 = parseFloat(b);
+	ketqua ="";
+	switch(pheptoan)
+	{
+		case "+":
+			ketqua = n1+n2;
+			break;
+		case "-":
+			ketqua = n1-n2;
+			break;
+		case "*":
+			ketqua = n1*n2;
+			break;
+		case "/":
+			if(n2!=0)
+				ketqua = n1/n2;
+			else
+				ketqua = "Chia cho 0";	
+			break;		
+	}
+	document.getElementById("tketqua").value=ketqua;
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="style14.css" />
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>A=
+    <input type="text" name="ta" id="ta" />
+    <span id="loia" class="loi"></span>
+  </p>
+  <p>B=
+    <input type="text" name="tb" id="tb" />
+    <span id="loib" class="loi"></span>
+  </p>
+  <p>Cộng
+    <input type="radio" name="r" id="radio" value="+" />
+    Trừ 
+    <input type="radio" name="r" id="radio2" value="-" />
+    Nhân 
+    <input type="radio" name="r" id="radio3" value="*" />
+    Chia
+    <input type="radio" name="r" id="radio4" value="/" />
+  </p>
+  <p>
+    <input type="button" name="b1" id="b1" 
+    value="Đồng ý" onclick="dongy();"  />
+  </p>
+  <p>Kết quả = 
+    <input type="text" name="tketqua" id="tketqua" />
+  </p>
+</form>
+</body>
+</html>

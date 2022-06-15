@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#0000A4;
+	font-family:Verdana, Geneva, sans-serif;
+}
+.nav{
+	margin:0 auto;
+	width:800px;
+	height:400px;
+}
+
+.main-menu li{
+	list-style-type:none;
+	float:left;
+	margin-right:40px;
+	margin-bottom:5px;
+}
+.main-menu li a{
+	text-decoration:none;
+	color:#CEEAEE;
+	font-size:16px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+.slidershow{
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+	margin-top:0px;
+	border:solid 10px #FFFFFF;
+	position:relative;
+	background:url(../images/anoceanofsky.jpg) no-repeat;
+	background-size:cover;
+	height:325px;
+}
+.slidershow h2{
+	position:absolute;
+	top:10px;
+	left:20px;
+	color:#FFF;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.slidershow p{
+	position:absolute;
+	top:45px;
+	left:40px;
+	color:#3e71b2;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.slidershow img{
+	height:300px;
+	width:100%;
+}
+.bd{
+	background:#FFF;
+	height:auto;
+	float:left;
+	margin-top:10px;
+
+}
+.bd1 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px
+}
+.bd1 img{
+	float:left;
+	margin-right:20px;
+	margin-left:30px;
+}
+.bd1 p{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:13px;
+	line-height:25px;
+	text-align:justify;
+	margin-right:20px;
+	margin-top:-15px;
+}
+.bd2 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px;
+	text-transform:none;
+	margin-top:40px;
+}
+.bd2 img{
+	float:right;
+	margin-right:20px;
+	margin-left:30px;
+}
+.bd2 p{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+	color:#0000000;
+	text-align:justify;
+	line-height:25px;
+	margin-left:30px;
+	margin-top:-15px;
+}
+.bd3 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px;
+	margin-top:40px;
+}
+.bd3 img{
+	float:left;
+	margin-left:20px;
+	margin-right:10px;
+}
+.bd3 p{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:13px;
+	margin-right:20px;
+	line-height:25px;
+	text-align:justify;
+	margin-top:-20px;
+}
+.contact{
+	background:#F93;
+	width:800px;
+	height:auto;
+	margin:0 auto;
+	float:left;
+	
+}
+.contact h3{
+	float:left;
+	color:#FFF;
+	text-transform:uppercase;
+	margin-left:15px;
+}
+#content_article {width:100%; background:white; box-sizing:border-box;
+		margin-top:10px; padding: 10px 20px; overflow: auto; }
+.article { margin-top:20px; clear:both; overflow:auto;}
+.article>h2 { font-size:16px; color:#000000}
+.article>img {width:200px;}
+.article>p {  font-size:13px; color:#000000;
+			text-align:justify}
+.img_left {float:left; margin-right:10px;}
+.img_right {float:right; margin-left:10px;}
+
+#footer { width:100%; height:21px;
+ 				background-image:url(Tai%20nguyen/footer.png);
+				 font-size:13px;
+				text-align:center; color:#CEEAEE;
+				clear: both;}
+
+#content_contact {width:100%; background-color:#FF9D2D; box-sizing:border-box;
+	margin-top:10px; padding: 10px 20px; overflow: auto;
+	color: white}
+
+#formContact {width: 450px; margin-left:10px; float: left;}
+.row {height:40px; display:flex; flex-direction: row;align-items: center;}
+.row2 {height:80px;display:flex; flex-direction: row;align-items: top; margin-top:10px}
+.spleft {width:100px; display:inline-block;}
+.spright {width:300px; display:inline-block;}
+input[type=text] {height:25px; width:300px}
+button {margin-left:100px}
+textarea {width:300px}
+
+#Contact-fa {width:280px; margin-left: 5px; margin-right: 5px; float: left;
+	box-sizing: border-box;
+	padding-left: 10px; padding-right: 10px}
+#Contact-fa h2 {margin-top: 0px; margin-bottom: 10px;}
+#Contact-fa p {text-align: justify; font-size: 12px}
+#Contact-fa i {margin-right: 5px}
+#Contact-fa a {color: white; text-decoration: none;}
+#ContactMap {width: 750px; height: 450px; margin: 10px auto; clear: both;}
+#footerContact {width:100%; height:40px;
+	background-color: #FF5F21;
+	font-size:13px;
+	text-align:center; color:#CEEAEE;
+	padding-top: 10px; font-weight: bold;
+	clear: both;}

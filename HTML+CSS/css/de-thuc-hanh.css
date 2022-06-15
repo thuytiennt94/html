@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#009;
+}
+.nav{
+	margin:0 auto;
+	width:900px;
+}
+.menu{
+	
+}
+.menu li{
+	color:#CEEAEE;
+	float:left;
+	margin:10px;
+	list-style-type:none;
+}
+.menu li a{
+	text-transform:uppercase;
+	text-decoration:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+}
+.slidershow{
+	background-image:url(../images/anoceanofsky.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	width:100%;
+	height:325px;
+	box-sizing:border-box;
+	float:left;
+	border:solid 8px #FFFFFF;
+	display:block;
+}
+.slidershow h2{
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	float:left;
+	top:50px;
+	margin-left:30px;
+}
+.slidershow p{
+	float:left;
+	position:absolute;
+	color:#39F;
+	top:95px;
+	margin-left:50px;
+}
+.main{
+	float:left;
+	background:#FFF;
+	margin-top:30px;
+	padding:10px;
+}
+.list-blog .list h3{
+	color:#000000;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	margin-left:20px;
+}
+.list-blog .list img{
+	float:left;
+	margin-right:20px;
+}
+.list:nth-child(even) img{
+	float:right;
+	margin-left:20px;
+}
+.list-blog .list p{
+	line-height:25px;
+	margin:25px;
+	margin-top:20px;
+	text-align:justify;
+	font-size:13px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tuổi</title>
+</head>
+
+<body>
+<script>
+	
+	
+	
+	function tuoitac(){
+		var a = document.getElementById("txtage").value;
+		
+		
+		/*var diaphuong = document.getElementsByName('diaphuong');
+		var dp = null;
+		
+		
+		for (var i = 0, length = diaphuong.length; i < length; i++) {
+		  if (diaphuong[i].checked) {
+			// do whatever you want with the checked radio
+			
+				dp = diaphuong[i].value;
+		
+			break;
+		  }
+		}*/
+		var gioitinh = document.getElementsByName('gioitinh');
+		var gt = null;
+		
+		
+		for (var i = 0, length = gioitinh.length; i < length; i++) {
+		  if (gioitinh[i].checked) {
+			// do whatever you want with the checked radio
+			
+				gt = gioitinh[i].value;
+		
+			break;
+		  }
+		}
+		
+		
+		//var gioitinh = document.
+	//	alert(test);
+		var gt_tb = '';
+		if(gt == 1)
+			gt_tb = ' anh';
+		else
+			gt_tb = ' chị';
+			
+		if(a<=6){
+				
+			alert("xin chào cháu");
+			return false;
+		}else if(a>=7 && a<18){
+				alert("xin chào " + gt_tb);
+			//alert("xin chào anh/em");
+			return false;
+		}else if(a>=18 && a<40){
+			alert("xin chào " + gt_tb);
+			return false;
+		}else if(a>=40 && a<60){
+			alert("xin chào bác");
+			return false;
+		}else{
+			alert("xin chào cụ");
+			return false;
+		}
+	}
+</script>
+
+<h3>Tuổi</h3>
+
+
+<p>Tỉnh</p>
+<input type="radio" value="hà nội" name="diaphuong" checked />HN<br/>
+<input type="radio" value="hải dương" name="diaphuong" /> HD<br/>
+<input type="radio" value="hải phòng" name="diaphuong" /> hải phòng<br/>
+<input type="radio" value="hưng yên" name="diaphuong" /> hưng yên
+
+
+
+
+<form name="tuoi" id="tuoitac" onsubmit="tuoitac()">
+
+	<input type="radio" value="1" name="gioitinh"   />Nam<br/>
+	<input type="radio" value="2" name="gioitinh" checked />Nữ<br/>
+	
+	
+	<p>Tuổi: <input type="text" id="txtage" /></p>
+</form>
+</body>
+</html>

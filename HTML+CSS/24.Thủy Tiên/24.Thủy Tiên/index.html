@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>BNGW</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;1,200&display=swap');
+		body {font-family: 'Nunito Sans', sans-serif; }
+	</style>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$("#form1").submit(function(){
+				if (Kiemtra()==false) {
+					return false;
+				}else{
+					alert("ok");
+				}
+				});
+		});
+	</script>
+</head>
+<body>
+<div class="nav">
+	<div class="menu">
+		<a href="#"><img src="logo.png" /></a>
+		<ul class="menu-right">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li ><a href="#" id="fn">Contact</a></li>
+		</ul>
+	<div class="contact">
+		<div class="contact-left">
+			<h3>Contact Info</h3>
+			<p>To give  give beginning divide, cattle. Give moving won't there the abundantly she'd she'd brought air upon.Light hath subdue.Life days creature upon first heaven gathring dre.</p>
+			<p><span>Address:</span> 10111 Santa Monica Boulevard,LA</p>
+			<p><span>Phone:</span> +44 987 065 908</p>
+			<p><span>Email:</span> info@Ecample.com</p>
+			<p><span>Fax:</span> +44 987 065 909</p>
+		</div>
+		<div class="contact-right">
+			<form id="form1" name="form1" method="post">
+				<input type="text" id="txtName" name="txtName" placeholder="Your Name">
+				<input type="text" id="txtMail" name="txtMail" placeholder="Your Mail">
+				<div id="erorrName"></div>
+				<div id="erorrMail"></div>
+				<input type="text" id="txtTitle" name="txtTitle" placeholder="Your Title">
+				<div id="erorrTitle"></div>
+				<textarea type="text" id="txtComment" rows="12" cols="68" placeholder="Your Comment"></textarea>
+				<div id="erorrComment"></div>
+				<button type="submit" id="btnSend" name="btnSend">Send Message</button>
+			</form>
+		</div>
+		<div class="contact-img">
+			<img src="map.png">
+		</div>
+	</div>
+		
+	</div>
+</div>
+</body>
+</html>

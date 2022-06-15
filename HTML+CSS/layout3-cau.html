@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Khách hàng</title>
+<link href="css/layout3-cau.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+
+<script src="javascript/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".header").click(function(){
+		$(".dropdown li").toggle();
+		
+	});
+	$(".fa-angle-down").click(function(){
+		$(".toppor").toggle();
+		return false;
+	});
+	/*$(".open").click(function(){
+		$(".drowdowm-menu").toggle();
+	});*/
+	$(".fa-chevron-down").click(function(){
+		$(".table").toggle();
+		return false;
+	});
+	$(".fa-angle-right").click(function(){
+		$mid = $(this).attr("mid");
+		$(".people").hide();
+		$(".supmenu-"+$mid).show();
+		return false;
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+<div class="nav">
+	<div class="topbar">
+		<div class="top-right"> 
+			<a href="#">
+			<i class="fa fa-comments-o" style="float:left;margin-top:15px;font-size:20px;"></i>
+			</a>
+			<ul class="header">
+			<a href="#" class="dropdown">
+				<span>Admin</span>
+				<i class="fa fa-angle-down" ></i>
+				<li>1</li>
+				<li>2</li>
+			</a>
+			</ul>
+		</div>
+	</div>
+	<!--<div class="page">
+	<div class="page-hear">-->
+	<div class="main">
+		<div class="main-menu-left">
+			<h3>
+			<i class="fa fa-arrow-circle-o-left" style="color:#333C5E"></i>Danh sách khách hàng
+			</h3>
+			<p class="top"><a href="">Home</a> <a href=""><i class="fa fa-angle-right"></i></a> <a href="">Danh sách khách hàng</a></p>
+		</div>
+		<div class="main-menu-right"> 
+			<a href="next" class="btn btn-right"> 
+			<i class="fa fa-signal" ></i> 
+			<span>thêm khách hàng</span> 
+			</a>
+			<a href="next" class="btn btn-right">
+			<i class="fa fa-signal" ></i>
+			<span>Thêm hàng od</span> 
+			</a> 
+		</div>
+	</div>
+	<div class="sibar">
+		<div class="sibar-left">
+			<span>Main sidebar</span>
+			<a href="#"><i class="fa fa-angle-down"></i></a>
+			<div class="toppor tip">
+				<a href="#"><img src="images/6eaf1a844ae4b6fa6eeb6ff17f468cc0.jpg" /></a>
+				<div class="tip-left">
+				<span class="media">Nguyễn Văn Bình</span>
+				<p class="ad"><i class="fa fa-file-text-o">&nbsp;&nbsp;&nbsp;admin</i></p>
+				</div>
+				<a href="#"><i class="fa fa-cog"></i></a>
+			</div>
+			<div class="toppor menu">
+			<span>Main</span>
+			<a href="#" class="foder"><i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Trang chủ</a>
+			<a href="#" class="foder"><i class="fa fa-database"></i>&nbsp;&nbsp;&nbsp;Khách hàng<i class="fa fa-angle-right" mid="1"></i></a>
+			<ul class="people supmenu-1">
+			
+				<li>Khách lấy hàng</li>
+				<li>Khách bom</li>
+			</ul>
+			<a href="#" class="foder"><i class="fa fa-file-o"></i>&nbsp;&nbsp;&nbsp;Đơn hàng&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right" mid="2"></i></a>
+			<ul class="people supmenu-2" >
+			
+				<li>Khách lấy hàng</li>
+				<li>Khách bom</li>
+			</ul>
+			</div>
+		</div>
+		<div class="content">
+			<h3>Danh sách khách hàng</h3>
+			<div class="heading">
+			<ul class="icon">
+				<li class="icon-reload"><a href="" ><i class="fa fa-chevron-down"></i></a></li>
+				<li class="icon-reload"><a href=""><i class="fa fa-repeat"></i></a></li>
+				<li class="icon-reload"><a href=""><i class="fa fa-times"></i></a></li>
+			</ul>
+			</div>
+			<table class="table table-bordered">
+			<thead>
+			<tr>
+			<td><p>Filter: </p></td>
+			<td>
+			<div class="search">
+			<form id="search-type" name="search-type" method="post">
+			<input id="type" placeholder="type to filter...." /><i class="fa fa-search" ></i>
+			</form>
+			</div>
+			</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<th style="width:20px;">TT</th>
+				<th style="width:250px;">Họ và tên</th>
+				<th style="width:180px;">Điện thoại</th>
+				<th style="width:400px;">Địa chỉ</th>
+				<th style="width:300px;">Fb</th>
+				<th style="width:300px;">Trạng thái</th>
+				<th style="width:200px;">Action</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Phạm Văn Cương</td>
+				<td>0987813788</td>
+				<td>HD</td>
+				<td><a href="">Phạm Văn Cương</a></td>
+				<td>Cần cọc</td>
+				<td>
+				<ul>
+					<li style="list-style-type:none; text-align:left;" class="open">
+					<a href="#"><i class="fa fa-bars"></i><i class="fa fa-caret-down"></i></a>
+					<ul class="dropdowm-first">
+						<li>
+						<a href="#" class="drowdowm-menu" style="display:none">&nbsp;&nbsp;<i class="fa fa-file"></i>FILE</a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Phạm Văn Cương</td>
+				<td>0987813788</td>
+				<td>HD</td>
+				<td><a href="">Phạm Văn Cương</a></td>
+				<td>Cần cọc</td>
+				<td>
+				<ul>
+					<li style="list-style-type:none; text-align:left;" class="open">
+					<a href="#"><i class="fa fa-bars"></i><i class="fa fa-caret-down"></i></a>
+					<ul class="dropdowm-second">
+						<li>
+						<a href="#" class="drowdowm-menu" style="display:none">&nbsp;&nbsp;<i class="fa fa-file"></i>FILE</a>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="7" style="text-align:left;height:60px;">Showwing 1 to 2 of 2 entries</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+

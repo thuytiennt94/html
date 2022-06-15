@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+#frmLogin{
+	width:500px;
+}
+.box-login{
+	border:solid 1px #CCC;
+	color:#06F;
+	padding:15px;
+}
+.main{
+	color:#999;
+}
+.text-box{
+	width:450px;
+	height:30px;
+}
+.enhaplai{
+	border:dotted 1px #F00;
+}

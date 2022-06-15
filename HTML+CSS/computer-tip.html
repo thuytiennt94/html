@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CALCULATOR TIP</title>
+<link href="computer.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+	function kiemtra(idtext, idloi, id){
+		var text = document.getElementById("idtext");
+		var loi = document.getElementById("idloi");
+		if(text.value=="")
+	{
+		baoloi.innerHTML = "Bạn chưa nhập hệ số " + idtext;
+		baoloi.style.color = "red";
+		text.focus();//đặt con trỏ vào input
+		return false; //kết thúc
+	}
+	if(isNaN(text.value)==true)
+	{
+		baoloi.innerHTML = "Bạn phải nhập số";
+		baoloi.style.color = "red";
+		text.select();//đặt con trỏ vào bôi đen nội dung text
+		return false; //kết thúc
+	}
+	baoloi.innerHTML="";//xóa thông báo lỗi
+	return true;
+	}
+	function calculator(){
+		var bill = document.getElementById("text");
+		var service = document.getElementById("tile");
+		var people = document.getElementById("txtpeople");
+		if(Kiemtra("bill", "baoloi1")==false)
+			return false;
+		if(Kiemtra("service", "baoloi2")==false)
+			return false;
+		if(Kiemtra("people", "baoloi3")==false)
+			return false;
+		var a = parseFloat(bill.value);
+		var b = parseFloat(service.value);
+		var c = parseFloat(people.value);
+		var tip = (a*b)/100;
+		
+		var kq = tip * c;
+		
+		document.getElementById("txtketqua").innerHTML = "TIP AMOUNT $"+ kq + " EACH.";
+		document.getElementById("nav").style.background = "pink";
+			}
+	
+</script>
+</head>
+
+<body>
+<div id="nav">
+<h3>TIP CALCULATOR</h3>
+<div id="menu">
+	<div class="list">
+	<p>How much was you bill?</p>
+	<p>$<input type="text" name="text" id="text" /></p>
+	<div id="baoloi1"></div>
+	</div>
+	<div class="list">
+	<p>How was you service?</p>
+	<select name="tile" id="tile" >
+		<option value="chon">--Choose an Option--</option>
+	<option value="30">30%-Outstanding</option>
+	<option value="20">20%-Good</option>
+	<option value="15">15%-It was OK</option>
+	<option value="10">10%-Bad</option>
+	<option value="5">5%-Terrible</option>
+	</select>
+	<div id="baoloi2"></div>
+	</div>
+	<p>How many are sharing the bill?</p>
+	<p><input type="text" id="txtpeople" placeholder="number of people" />people</p>
+	<input type="button" value="CALCULATE!" onclick="calculator()" />
+	<div id="baoloi3"></div>
+	<p id="txtketqua">
+	
+	</p>
+</div>
+
+</div>
+</body>
+</html>

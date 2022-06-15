@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bài thi thực hành</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="bai-thi.css" rel="stylesheet" type="text/css"/>
+<script>
+	$(document).ready(function(e) {
+		$("#btnYes").click(function(){
+			if($("#txtHoten").val()==''){
+				alert("Phải nhập Họ tên");
+				return false;
+			}
+			if($("#txtHoten").val().length>=50){
+				alert("Chỉ nhập tối đa 50 kí tự");
+				return false;
+			}
+			re =  /^\w+@\w+(\.\w+){1,3}$/;
+			if(re.test($("#txtEmail").val())==false){
+				alert("Phải nhập email đúng định dạng");
+				return false;
+			}
+			if($("#txtPhone").val()==''){
+				alert("Mời nhập số điện thoại");
+				return false;
+			}
+			phone = /^([09|08|07|06|05|04])+([0-9]{8})+$/;
+			if(phone.test($("#txtPhone").val())==false){
+				alert("Nhập 10 số");
+				return false;
+			}
+			$gioitinh = $('input[name="Gioitinh"]:checked').val();
+			if($gioitinh == undefined){
+				alert("Chưa chọn giới tính");
+				return false;
+			}
+			$sothich = '';
+			$("input[name=sothich]").each(function(index, element) {
+				if($(this).is(":checked")){
+					$sothich = $sothich + $(this).val() +" ,";
+				}
+			});
+			
+			
+			$("#showHoten").html($("#txtHoten").val());
+            $("#showEmail").html($("#txtEmail").val());
+			$("#showPhone").html($("#txtPhone").val());
+			$("#showGT").html($('input[name="Gioitinh"]:checked').val()); 
+			$("#showLike").html($sothich); 
+			$("#showYou").html($("#txtYou").val()); 
+			$(".body-form").hide();
+			$("#my-modal").modal();
+			
+		});
+	});
+</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row header">
+		<div class="col-sm-3"> 
+			<img src="logo.png" class="rounded float-left" width="100%"/>
+			<h4>Your company slogan</h4>
+		</div>
+		<div class="col-sm-9"> <img src="banner.png" class="rounded float-left" width="100%" /> </div>
+	</div>
+	<div class="container body-form">
+		<h3>Đăng ký thông tin người dùng</h3>
+		<form id="form-dk" name="form-dk" action="" method="post">
+			<div class="form-group">
+				<label for="txtHoten">Họ tên:</label>
+				<input id="txtHoten" class="form-control" type="text" name="txtHoten" placeholder="Họ tên">
+			</div>
+			<div class="form-group">
+				<label for="txtEmail">Email:</label>
+				<input id="txtEmail" class="form-control" type="text" name="txtEmail" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<label for="txtPhone">Phone:</label>
+				<input id="txtPhone" class="form-control" type="text" name="txtPhone" placeholder="Phone number">
+			</div>
+			<div class="form-check">
+				<label for="txtGT">Giới tính:</label>
+				<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-inptut" name="Gioitinh" id="Gioitinh" value="Nam" />
+					Nam </label>
+				</div>
+				<div class="form-check-inline">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-inptut" name="Gioitinh" id="Gioitinh" value="Nữ" />
+					Nữ </label>
+				</div>
+			</div>
+			<div class="form-check">
+				<label for="txtST">Sở thích:</label>
+				<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input" name="sothich" value="Thể thao">
+					Thể thao </label>
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input" name="sothich" value="Phim ảnh">
+					Phim ảnh </label>
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input" name="sothich" value="Đọc sách">
+					Đọc sách </label>
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input" name="sothich" value="Âm nhạc">
+					Âm nhạc </label>
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input" name="sothich" value="Khác">
+					Khác </label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="txtYou">Giới thiệu bản thân:</label>
+				<textarea id="txtYou" class="form-control" name="txtYou" placeholder="Giới thiệu bản thân" rows="5px;"></textarea>
+			</div>
+			<button type="button" class="btn btn-primary" id="btnYes">Đồng ý</button>
+		</form>
+	</div>
+	        <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: burlywood;">
+                        <h5 class="modal-title" id="my-modal-title">Thông tin của bạn</h5>
+						<button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        
+                    </div>
+                    <div class="modal-body bg-warning">
+                        <p>Họ tên: <span id="showHoten"></span></p>
+                        <p>Email: <span id="showEmail"></span></p>
+						<p>Phone: <span id="showPhone"></span></p>
+                        <p>Giới tính: <span id="showGT"></span></p>
+						<p>Sở thích: <span id="showLike"></span></p>
+						<p>Giới thiệu bản thân: <span id="showYou"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" style="background:#66F; color:#FFF">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+	
+	<div class="row footer">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-9"><h5>Nguyễn Thị Thủy Tiên - T2109A - tiennttth2109043@fpt.edu.vn</h5></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hàm</title>
+</head>
+
+<body>
+<h3>Tạo và gọi hàm</h3>
+<script language="javascript">
+	function Hi(){
+		window.alert("hi JV");
+	}
+	Hi();
+	x=40;
+	y=3.1415;
+	function tinhtong(x,y){
+		return x+y;
+	}
+	tong = tinhtong(x,y);
+	document.write("<br>Tổng của " + x + " and " + y+ " là: " +tong);
+</script>
+</body>
+</html>
+function ptbac(){
+	//alert("xin chào");
+	var so_a = document.getElementById("txtsoa").value;
+	var so_b = document.getElementById("txtsob").value;
+	
+	var tong = parseInt(a) + parseInt(b);
+	
+	document.getElementById("txtKQ").value = tong;
+	return false;
+	
+}
+body<form name="ptbac1" id="ptbac1" onsubmit="return ptbac()">

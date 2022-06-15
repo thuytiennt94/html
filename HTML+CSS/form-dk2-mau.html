@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Đăng ký</title>
+</head>
+
+<body>
+<h2 style="color:green; text-align:center"> Đăng ký thành viên</h2>
+<!--action="" thì submit sẻ gửi dữ liệu tới chính trang hiện tại-->
+<form method="get" name="f1" id="f1" action="">
+<table width="600" align="center" border="0" cellspacing="0" >
+    <tr>
+        <td align="right">Họ tên: </td>
+        <td><input type="text" name="t1" id="t1" size="30"></td>
+    </tr>
+    <tr>
+        <td align="right"> Email: </td>
+        <td><input type="text" name="t2" id="t2" size="30"></td>
+    </tr>
+    <tr>
+        <td align="right"> Giới tính:</td>
+        <td>
+            <label for="r1">Nam:</label> 
+            <input type="radio" name="rGioitinh" id="r1" value="Male" checked>
+            <label for="r2">Nữ: </label>
+            <input type="radio" name="rGioitinh" id="r2" value="Female">
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Sở thích:</td>
+        <td>
+            <label for="c1">Thể thao</label> 
+   			<input type="checkbox" name="c1" id="c1" value="Sport" checked>
+    		<label for="c2">Nghe nhạc</label> 
+    		<input type="checkbox" name="c2" id="c2" value="Music">
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Ngành học:</td>
+        <td>
+            <select name="s1" id="s1" size="1">
+                <option value=""> Chọn ngành học</option>
+                <option value="IT" selected> Công nghệ thông tin</option>
+                <option value="English">Ngoại ngữ - Tiếng Anh</option>
+                <option value="Economic"> Kinh tế</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td align="right" valign="top">Giới thiệu:</td>
+        <td>
+        <textarea name="t3" id="t3" rows="5" cols="50"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+        <input type="submit" name="b1" id="b1" value="Đồng ý">
+        <input type="reset" name="b2" id="b2" value="Nhập lại">
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

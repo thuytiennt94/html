@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.pt{
+	margin:0 auto;
+	width:300px;
+}
+.pt h2{
+	color:#F00;
+	text-align:center;
+}
+#txtsoa, #txtsob{
+	color:#9CF;
+	background:#FFC;
+
+}
+.btn{
+	width:58px;
+	
+}

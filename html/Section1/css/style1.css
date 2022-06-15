@@ -1,0 +1,16 @@
+/* CSS Document */
+
+a{
+		color:#FF0000;
+		font-weight:700;
+		text-decoration:none;
+		font-size:30px;
+	}
+	.b{
+		font-weight:300;
+		color:#039;
+		font-family:Tahoma, Geneva, sans-serif;
+	}
+	.c{
+		color:#FF00FF;
+	}

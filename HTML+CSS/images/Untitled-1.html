@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Angular JS Filters</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+      </script>
+</head>
+
+<body ng-app="ungdungHCN">
+	<h2>Tính chu vi, diện tích</h2>
+	<div ng-controller = "ControllerHCN" >
+		<p>CHiều dài:
+			<input type="number" ng-model="chieudai" >
+		</p>
+		<p>CHiều rộng:
+			<input type="number" ng-model="chieurong">
+		</p>
+		<p>
+			<input type="button" value="chu vi" ng-click="chuvi()">
+			<input type="button" value="Diện tích" ng-click="dientich()">
+		</p>
+		<p>kết quả : {{ketqua}}</p>
+	</div>
+	<script>
+				var myApp = angular.module("ungdungHCN", []);
+				myApp.controller("ControllerHCN", function($scope){
+					$scope.chuvi = function(){
+						$scope.ketqua = ($scope.chieudai+$scope.chieurong)*2;
+					}
+					$scope.dientich= function(){
+					$scope.ketqua = ($scope.chieudai*$scope.chieurong);
+							}
+					})
+	</script>
+</body>
+</html>

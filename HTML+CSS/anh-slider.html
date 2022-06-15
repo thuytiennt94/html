@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slide show</title>
+<script language="javascript">
+var arr = new Array("Desert.jpg","Jellyfish.jpg","Koala.jpg","Penguins.jpg","01.jpg", "02.jpg");
+var i = 0;
+function chayanh()
+{
+	document.getElementById("anhslide").src = "images/" + arr[i];
+	i++;
+	if(i==arr.length)
+		i=0;
+	window.setTimeout("chayanh()",1000);
+}
+</script>
+</head>
+
+<body>
+<img width="500" src="images/Desert.jpg" id="anhslide" 
+								style="border:red 1px solid">
+<script language="javascript">
+chayanh();
+</script>
+</body>
+</html>

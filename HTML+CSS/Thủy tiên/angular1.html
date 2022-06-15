@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<body ng-app="myApp" ng-controller="Game">
+    <h2>
+        vô địch giải game 2021</h2>
+    <h3>tên:{{hoten}}</h3>
+    <h3>tuổi:{{tuoi}}</h3>
+    <h3 *ngIf="tuoi >=18">Đủ tuổi đi làm></h3>
+    <h3 *ngIf="tuoi<18">Chưa đủ tuổi đi làm</h3>
+    <h3>Danh sách món ăn</h3>
+    <ul *ngFor="let monan of cacmonan" style="color: beige; background-color: blueviolet;">
+        <li>{{monan}}</li>
+    </ul>
+    <h4 *ngIf="tuoi >=18 then tren18 else duoi18">
+    </h4>
+    <ng-template #tren18>đi làm thôi nào :))</ng-template>
+    <ng-template #duoi18>Vân muốn chơi lắm </ng-template>
+    <br>
+    <input type="text" [(ngModel)]="hoten" )]>
+    <br>
+    <input type="text" (ngModel)]="tuoi" )]>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("Game", function($scope) {
+            [{
+                hoten: nguyễn văn a,
+                tuoi: 7,
+
+            }]
+        })
+    </script>
+</body>
+
+</html>

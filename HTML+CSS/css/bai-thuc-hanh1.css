@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#0000A4;
+}
+.nav{
+	margin:0 auto;
+	width:700px;
+	height:400px;
+}
+
+.main-menu li{
+	list-style-type:none;
+	float:left;
+	margin-right:40px;
+	margin-bottom:5px;
+}
+.main-menu li a{
+	text-decoration:none;
+	color:#CEEAEE;
+	font-size:16px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+.slidershow{
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+	margin-top:0px;
+	border:solid 10px #FFFFFF;
+	position:relative;
+	background:url(../images/anoceanofsky.jpg) no-repeat;
+	background-size:cover;
+	height:325px;
+}
+.slidershow h2{
+	position:absolute;
+	top:10px;
+	left:20px;
+	color:#FFF;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.slidershow p{
+	position:absolute;
+	top:45px;
+	left:40px;
+	color:#3e71b2;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.slidershow img{
+	height:300px;
+	width:100%;
+}
+.bd{
+	background:#FFF;
+	height:auto;
+	float:left;
+	margin-top:10px;
+
+}
+.bd1 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px
+}
+.bd1 img{
+	float:left;
+	margin-right:20px;
+	margin-left:30px;
+}
+.bd1 p{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:13px;
+	line-height:25px;
+	text-align:justify;
+	margin-right:20px;
+	margin-top:-15px;
+}
+.bd2 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px;
+	text-transform:none;
+	margin-top:40px;
+}
+.bd2 img{
+	float:right;
+	margin-right:20px;
+	margin-left:30px;
+}
+.bd2 p{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+	color:#0000000;
+	text-align:justify;
+	line-height:25px;
+	margin-left:30px;
+	margin-top:-15px;
+}
+.bd3 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:16px;
+	margin-left:30px;
+	margin-top:40px;
+}
+.bd3 img{
+	float:left;
+	margin-left:20px;
+	margin-right:10px;
+}
+.bd3 p{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000000;
+	font-size:13px;
+	margin-right:20px;
+	line-height:25px;
+	text-align:justify;
+	margin-top:-20px;
+}

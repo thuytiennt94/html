@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+.nav{
+	width:350px;
+	margin:0 auto;
+}
+.login{
+	text-transform:uppercase;
+	font-size:20px;
+}
+.main-menu{
+	color:#09F;
+	float:left;
+}
+.box-login{
+	border:solid 1px #CCCCCC;
+	border-radius:3px;
+}
+.test{
+	color:#999;
+}
+.main{
+	color:#000;
+	padding:15px;
+}
+.main #txtusername, #txtpassword{
+	margin-right:10px;
+	padding-left:37px;
+}
+#txtusername, #txtpassword{
+	width:250px;
+	height:20px;
+}
+.name{
+	position:relative;
+}
+.fa-user, .fa-lock{
+	position:absolute;
+	left:10px;
+	color:#007AFF;
+	margin-top:5px;
+}
+#check{
+	color:#A49B9C;
+}
+#txtsubmit{
+	padding: 8px;
+    background: #007AFF;
+    float: right;
+    color: #FFF;
+    border-radius: 5px;
+    border: 0px;
+}
+.final{
+	color:#CCC;
+	float:left;
+	font-size:16px;
+}
+.final a{
+	text-decoration:none;
+	color:#5699FF;
+}
+.error{
+	color:#F00
+}
+
+.abc{
+	background:#F00;
+	float:left;
+	color:#FFF;
+	width:200px;
+	height:300px;
+}

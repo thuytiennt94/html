@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hộp thoại</title>
+</head>
+
+<body>
+<h3>Hộp thoại</h3>
+<script language="javascript">
+	window.alert('hello JS');
+	gioitinh = window.confirm("giới tính của bạn là: (Nam - OK, Nữ - cancel")
+	if(gioitinh == true)
+		document.write("Giới tính: <i>Nam </i>");
+	else
+		document.write("Giới tính: <b>Nữ </b>");
+	Hoten = window.prompt("Nhập Họ và tên: ", "asdf")
+	if(Hoten == null)
+		document.write("Bạn nhấn cancel");
+	else if(Hoten == "")
+		document.write("Bạn chưa nhập họ tên");
+	else
+		document.write("<br>Hi: " + Hoten );
+</script>
+</body>
+</html>

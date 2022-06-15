@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form - JQ - bài 2</title>
+<script src="Thủy tiên/javascript/jquery-3.6.0.min.js"></script>
+<link href="Thủy tiên/form-JQ-bai2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script language="javascript">
+
+$(document).ready(function() {
+	$("#frmLogin").submit(function(){
+		if($("#txtname").val().length==""){
+			alert("Mời nhập họ tên");
+			$("#txtname").addClass("enhaplai");
+			return false;
+		}else{
+			$("#txtname").removeClass("enhaplai");
+			return false;
+		}
+		
+	});
+	
+	$(".text-box").change(function(){
+		$giatri = $(this).val();
+		alert("Bạn đã nhập: " + $giatri);
+	});
+	
+	
+	
+});
+</script>
+</head>
+
+<body>
+<form id="frmLogin" method="post">
+	<fieldset class="box-login">
+		<legend>Sign Up</legend>
+		<div class="main">
+			<p class="test">Enter your personal details below</p>
+			<p>
+				<input type="text" id="txtname" class="text-box" name="txtname" placeholder="Full Name"/>
+			</p>
+			<p>
+				<input type="text" id="txtaddress" class="text-box" name="txtaddress" placeholder="Address"/>
+			</p>
+			<p>
+				<input type="text" id="txtcity" class="text-box" name="txtcity" placeholder="City"/>
+			</p>
+			<p>Gender</p>
+			<p>
+				<input type="radio" id="gioitinh" name="gioitinh" checked="checked"/>
+				Female
+				<input type="radio" id="gioitinh" name="gioitinh" />
+				Male</p>
+			<p>Enter your account details below.</p>
+			<p>
+				<input type="text" id="txtmail" class="text-box" name="txtmail" placeholder="Email" />
+			</p>
+			<p>
+				<input type="text" id="txtpassword" class="text-box" name="txtpassword" placeholder="Passwword" />
+			</p>
+			<p>
+				<input type="text" id="txtagain" class="text-box" name="txtagian" placeholder="Password Again" />
+			</p>
+			<p>
+				<input type="checkbox" id="check" />
+				I Agree</p>
+				<p><input type="submit" value="Submit" name="btnSubmit"/></p>
+		</div>
+	</fieldset>
+</form>
+</body>
+</html>

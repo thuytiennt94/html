@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="javascript/jquery-3.6.0.min.js"></script>
+<link href="may-tinh-tips.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="may-tinh-tips.js"></script>
+<title>Tips</title>
+<script>
+	$(document).ready(function(e) {
+		$("#btnOK").click(function(e){
+			if(kiemtra()==false)
+				return false;
+			tinhtien();
+			return true;
+		});
+	});
+</script>
+</head>
+
+<body>
+<div class="nav">
+<h3>Tips Caculator</h3>
+<form name="form1" id="form1">
+	<div class="main">
+		<p>How much was you bill?</p>
+		$<input type="text" id="txtmoney" name="txtmoney" />
+	</div>
+	<div id="errmoney"></div>
+	<div class="main">
+		<p>How much you servise?</p>
+		<select name="title" id="title">
+		<option value="">--Choose an Option--</option>
+		<option value="0.3">30% - outstanding</option>
+		<option value="0.2">20% - Good</option>
+		<option value="0.15">15% - It was OK</option>
+		<option value="0.1">10% - Bad</option>
+		<option value="0.05">5% - Terrible</option>
+		</select>
+	</div>
+	<div id="errtitle"></div>
+	<div class="main">
+		<p>How many people are sharing the bill?</p>
+		<input type="text" id="txtpeople" name="txtpeople" />  people.
+	</div>
+	<div id="errpeople"></div>
+	<div class="main button">
+		<button type="button" id="btnOK" name="btnOK">Caculate!</button>
+	</div>
+	<div id="Tientip"></div>
+</form>
+</div>
+</body>
+</html>

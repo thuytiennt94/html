@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image: linear-gradient(to right,#3E1D16, #621D13);
+}
+.nav{
+	margin:0 auto;
+	width:300px;
+	background:#FFF;
+	border:solid 1px #9933CC;
+	height:380px;
+	margin-top:50px;
+	border-radius:10px;
+}
+h3{
+	color:#FFF;
+	background:#000;
+	margin-top:0px;
+	height:30px;
+	width:auto;
+	text-align:center;
+	font-size:18px;
+	border-radius:10px 10px 0px 0px;
+}
+#btnOK{
+	background:#933;
+	color:#FFF;
+	font-size:16px;
+	text-transform:uppercase;
+}
+
+.main{
+	margin:25px;
+	
+}
+.button{
+	margin-left:90px;
+}
+#Tientip{
+	text-align:center;
+	font-size:18px;
+	color:#F06;
+}
+

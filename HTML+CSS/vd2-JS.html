@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Checkbox</title>
+<script language="javascript">
+function xuly()
+{
+	hopchon = document.getElementById("c1");
+	nutbam = document.getElementById("b1");
+	if(hopchon.checked)//nếu hộp chọn được tích
+	{
+		nutbam.disabled = false;//tắt thuộc tính disabled để nút bấm được hoạt động
+	}
+	else
+	{
+		nutbam.disabled = true;//vô hiệu hóa nút bấm
+	}
+}
+</script>
+</head>
+
+<body>
+<form name="f1" id="f1" action="http://fpt.vn">
+<label for="c1">Đồng ý:</label> 
+<input type="checkbox" name="c1" id="c1" value="OK" onClick="xuly()">
+<br>
+<input type="submit" name="b1" id="b1" value="Tiếp tục" disabled>
+<!-- thuộc tính  disabled để vô hiệu hóa 1 điều khiển -->
+</form>
+</body>
+</html>

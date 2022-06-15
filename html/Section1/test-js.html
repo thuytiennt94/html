@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form đăng nhập</title>
+<script language="javascript">
+function kiemtra()
+{
+	//sử dụng document.getElementByid("id của thẻ"); để truy cập và thẻ	
+	inputUser = document.getElementById("tUser");
+	inputPass = document.getElementById("tPass");
+	if(inputUser.value=="")
+	{
+		alert("Bạn chưa nhập user");
+		inputUser.focus();//đặt con tro nhập liệu và tUser
+	}
+	else if(inputPass.value=="")
+	{
+		alert("Bạn chưa nhập password");
+		inputPass.focus();//đặt con tro nhập liệu và tPas
+	}
+	else
+		alert("Username: " + inputUser.value + ", Password:  " + inputPass.value);
+}
+function hellowould(hoten, diachi, dienthoai){
+		document.write('<br/>họ tên:' +hoten);
+		document.write('<br/>địa chỉ: ' +diachi);
+		document.write('<br/>điện thoại: ' +dienthoai);
+	}
+	//hellowould('nguyễn văn a','số 1000- hn', '0235522' );
+	function name(a){
+		document.write('xin chào ' + a);
+	}
+	name('thu');
+</script>
+</head>
+
+<body>
+<h2> Đăng nhập</h2>
+<form name="form1" id="form1" action="">
+    <p> Username: <input type="text" name="tUser" id="tUser"></p>
+    <p> Password: <input type="password" name="tPass" id="tPass"></p>
+    <p> <input type="button" name="b1" id="b1" value="Kiểm tra" onClick="kiemtra()">
+</form>
+</body>
+</html>

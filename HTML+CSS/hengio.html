@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hẹn giờ</title>
+<script language="javascript">
+var arr = new Array("http://google.com","http://facebook.com",
+						"http://dantri.com.vn");
+var n = -1;		
+function MoTrang()
+{
+	n++;
+	document.getElementById("thoigian").innerHTML = n;
+	if(n<arr.length)
+		window.open(arr[n]);
+	else
+		window.clearInterval(dh);
+}				
+</script>
+</head>
+
+<body>
+<h2>Hẹn sau mỗi giây mở một cửa sổ mới</h2>
+<div id="thoigian"></div>
+<script language="javascript">
+	var dh = window.setInterval("MoTrang()", 2000);
+</script>
+</body>
+</html>

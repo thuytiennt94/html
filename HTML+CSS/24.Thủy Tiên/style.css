@@ -1,0 +1,88 @@
+.nav{
+	margin:0 auto;
+	width:1000px;
+}
+.menu{
+	height:65px;
+}
+.menu-right{
+	float:right;
+}
+.menu-right li{
+	list-style-type:none;
+	float:left;
+	margin-right:20px;
+	font-size:15px;
+}
+.menu-right li a{
+	text-decoration:none;
+	text-transform:uppercase;	
+	color:#000;
+	font-weight:bold;
+}
+.menu img{
+	float:left;
+	margin-left:100px;
+	margin-top:13px;
+}
+span{
+	font-weight:bold;
+	font-size:18px;
+}
+#fn{
+	color:#6FDCD7!important;
+}
+.contact{
+	float:left;
+	width:100%;
+	background:#F5F5F5;
+}
+h3{
+	font-size:34px;
+}
+.contact-left{
+	float:left;
+	width:330px;
+	margin:50px;
+}
+.contact-right{
+	margin-top:70px;
+}
+.contact-right #txtName, #txtMail, #txtTitle, #txtComment{
+	margin-bottom:30px;
+	border:0px;
+}
+#txtName, #txtMail{
+	width:245px;
+	float:left;
+	height:40px;
+	margin-right:20px;
+}
+#txtTitle{
+	width:515px;
+	height:40px;
+}
+
+/*#txtComment{
+	height:200px;
+	width:515px;
+}*/
+#btnSend{
+	background:#10C9C3;
+	color:#E6F9F8;
+	margin-top:30px;
+	padding-right:30px;
+	padding-left:30px;
+	padding-top:20px;
+	padding-bottom:20px;
+	border:0px;
+}
+.contact-img img{
+	width: 85%;
+	margin-top:40px;
+    margin-left: 75px;
+}
+#erorrName, #erorrMail, #erorrTitle, #erorrComment{
+	float: left;
+	font-size:16px;
+}

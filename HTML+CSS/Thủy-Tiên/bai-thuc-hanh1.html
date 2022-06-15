@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bài thực hành 1</title>
+<script src="jquery-3.6.0.min.js"></script>
+<link href="bai-thuc-hanh1.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+	$(document).ready(function(){	
+		$("#form1").submit(function(){
+			if($("#txtName").val()==''){
+				$("#erorrName").html("This field is required");
+				$("#erorrName").css("color","#09F");
+				$("#txtName").focus();
+				return false;
+			}
+			$("#erorrName").html('');
+			rep = /^\w+@\w+(\.\w+)+$/;
+			if(rep.test($("#txtEmail").val())==false){
+				$("#erorrEmail").html("Hãy nhập Email");
+				$("#erorrEmail").css("color", "red");
+				$("#txtEmail").focus();
+				return false;
+			}
+			$("#erorrEmail").html('');
+			re = /^(09|08)+([0-9]{8})+$/;
+			if(re.test($("#txtPhone").val())==false){
+				$("#erorrPhone").html("Hãy nhập SDT");
+				$("#erorrPhone").css("color", "#96C");
+				$("#txtPhone").focus();
+				return false;
+			}
+			$("#erorrPhone").html('');
+			});
+		return false;
+	});
+</script>
+</head>
+
+<body>
+<div class="nav" >
+	<div class="header">
+		<ul class="main-menu">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Porfolio</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="bai-thuc-hanh1.html">Contact</a></li>
+		</ul>
+	</div>
+		<div id="content_contact">
+    	<h2> CONTACT US</h2>
+        <div id="formContact">
+            <form name="form1" id="form1" >
+            <div class="row">
+                <span class="spleft">Fullname:</span> 
+                <span class="spright"><input type="text" id="txtName" placeholder="FullName"></span>
+            </div>
+			<div id="erorrName"></div>
+            <div class="row">
+                <span class="spleft">Email:</span> 
+                <span class="spright"><input type="text" id="txtEmail" placeholder="Email"></span>
+            </div>
+			<div id="erorrEmail"></div>
+            <div class="row">
+                <span class="spleft">Phone:</span> 
+                <span class="spright"><input type="text" id="txtPhone" placeholder="Phone"></span>
+            </div>
+			<div id="erorrPhone"></div>
+            <div class="row2">
+                <span class="spleft">Content:</span> 
+                <span class="spright"><textarea rows="5" cols="30"></textarea></span>
+            </div>
+            <div>
+                <button type="submit"> Send contact</button>
+            </div>
+            </form>
+         </div>
+        <div id="Contact-fa">
+            <h2>FPT Aptech Hà Nội</h2>
+            <p>FPT Aptech có hơn 22 năm kinh nghiệm đào tạo lập trình viên quốc tế tại Việt Nam, và luôn là sự lựa chọn hàng đầu của các sinh viên và nhà tuyển dụng</p>
+            <p><i class="fa fa-address-card fa- "></i>Số 8A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội, Việt Nam</p>
+            <p><i class="fa fa-phone-square fa- "></i>028 7300 8866 - 0981578920</p>
+            <p><i class="fa fa-envelope"></i><a href="mail:aptech.fpt@fe.edu.vn">aptech.fpt@fe.edu.vn</a> </p>
+            <p><i class="fa fa-internet-explorer"></i><a href="https://aptech.fpt.edu.vn/">aptech.fpt.edu.vn</a></p>
+        </div>
+        <p style="height: 20px; clear: both"> </p>
+        <div id="ContactMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1025695701687!2d105.7804477656358!3d21.028581556997707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f9bdf0e1c7%3A0x26caee8e7662dd9b!2zRlBUIEFwdGVjaCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1637914233513!5m2!1svi!2s" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div id="footerContact">Web Deverloped by FPT Aptech T2109A</div>
+</div>
+</body>
+</html>

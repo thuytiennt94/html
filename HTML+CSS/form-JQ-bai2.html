@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form - JQ - bài 2</title>
+<script src="Thủy tiên/jquery-3.6.0.min.js"></script>
+<link href="Thủy tiên/form-JQ-bai2.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script language="javascript" src="Thủy tiên/form-JQ-bai2.js"></script>
+<script >
+$(document).ready(function(e) {
+		$("#agree").click(function(){
+		if($("#agree").prop("checked")==true)
+			$("#btnSubmit").prop("disabled",false);
+		else
+			$("#btnSubmit").prop("disabled",true);
+		});
+		$("#frmLogin").submit(function(){
+			return kiemtra();
+		});
+		
+});
+
+</script>
+</head>
+
+<body>
+<form id="frmLogin" method="post">
+	<fieldset class="box-login">
+		<legend>Sign Up</legend>
+		<div class="main">
+			<p class="test">Enter your personal details below</p>
+			<p>
+				<input type="text" id="txtname" class="text-box" name="txtname" placeholder="Full Name"/>
+			</p>
+			<div id="eName"></div>
+			<p>
+				<input type="text" id="txtaddress" class="text-box" name="txtaddress" placeholder="Address"/>
+			</p>
+			<div id="eAddress"></div>
+			<p>
+				<input type="text" id="txtcity" class="text-box" name="txtcity" placeholder="City"/>
+			</p>
+			<div id="eCity"></div>
+			<p>Gender</p>
+			<div class="check_box">
+				<input type="radio" id="r1" name="rGender" value="0">
+				<label for="r1">Female</label>
+				<input type="radio" id="r2" name="rGender" value="1" >
+				<label for="r2">Male</label>
+			</div>
+			<div id="ErorrGender"></div>
+			<p>Enter your account details below.</p>
+			<p class="icon"><i class="fa fa-envelope"></i>
+				<input type="text" id="txtmail" class="text-box" name="txtmail" placeholder="Email" />
+			</p>
+			<div id="eMail"></div>
+			<p class="icon"><i class="fa fa-lock"></i>
+				<input type="text" id="txtpassword" class="text-box" name="txtpassword" placeholder="Passwword" />
+			</p>
+			<div id="ePass"></div>
+			<p class="icon"><i class="fa fa-lock"></i>
+				<input type="text" id="txtagain" class="text-box" name="txtagian" placeholder="Password Again" />
+			</p>
+			<div id="eAgain"></div>
+			<div class="check_box">
+				<input type="checkbox" id="agree" value="1"/>
+				I Agree</div>
+			<p>Already have an account?<a href="#">Log in</a></p>
+			<button type="submit" id="btnSubmit" value="" />
+			Login <i class="fa fa-arrow-circle-right"></i>
+			</button>
+		</div>
+	</fieldset>
+</form>
+</body>
+</html>

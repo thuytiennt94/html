@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phương trình bậc 1</title>
+<link href="bai-thuc-hanh-JS1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<script language="javascript">
+	function ptbac(){
+		var a = document.getElementById("txtsoa").value;
+		var b = document.getElementById("txtsob").value;
+		if(a==0 ){
+			document.getElementById("txtKQ").value = "Phương trình vô nghiệm";
+		}else if(a==0 && b==0){
+			document.getElementById("txtKQ").value = "Phương trình vô số nghiệm";
+		}else{
+			if(b==0){
+				document.getElementById("txtKQ").value = 0;
+				
+			}else if(b>0){
+				var c = 0-b;
+				var kq = c/a;
+				document.getElementById("txtKQ").value = kq;
+			}else{
+				var c = 0-b;
+				var kq = c/a;
+				document.getElementById("txtKQ").value = kq;
+				return false;
+			}
+		}
+	}
+	
+	
+	</script>
+<div class="main">
+<h2>Phương trình bậc 1</h2>
+<div class="blog-list">
+<form name="ptbac1" id="ptbac" >
+<div class="blog">
+	<p>Hệ số A= <input type="text" name="txtsoa" id="txtsoa" value="0" /> </p>
+	<p>Hệ số B= <input type="text" name="txtsob" id="txtsob" value="0"/> </p>
+	<input type="button" name="GiaiPT" id="GiaiPT" value="GiảiPT	" onclick="ptbac()"/>
+	<p>Kết quả = <input type="text" name="txtKQ" id="txtKQ" /> </p>
+	</div>
+</form>
+</div>
+</div>
+</body>
+</html>

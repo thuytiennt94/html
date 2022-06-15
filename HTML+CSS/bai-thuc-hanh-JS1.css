@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.main{
+	margin:0 auto;
+	width:300px;
+}
+
+#GiaiPT{
+	margin-left:40px;
+	width:200px;
+	text-align:center;
+}
+
+#txtsob,#txtsoa{
+	background:#09F;
+	color:#FFF;
+	border-radius:10px;
+	width:200px;
+}
+#txtKQ{
+	background:#CF3;
+	border-radius:10px;
+	text-align:center;
+	width:200px;
+}

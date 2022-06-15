@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ví dụ thay nội dung thẻ</title>
+<style type="text/css">
+.class1 {border:1px red dashed;}
+.class2  {border:2px red dotted;}
+.class3  {border:3px red solid;}
+</style>
+<script language="javascript">
+function DamClick()
+{
+	test = document.getElementById("test");
+	if(document.form1.ckDam.checked)
+		test.style.fontWeight = "bold";
+	else
+		test.style.fontWeight = "normal";
+}
+function NghiengClick()
+{
+	test = document.getElementById("test");
+	if(document.form1.ckNghieng.checked)
+		test.style.fontStyle = "italic";
+	else
+		test.style.fontStyle = "normal";
+}
+function update()
+{
+	test = document.getElementById("test");
+	test.innerHTML = document.form1.tNoidung.value;
+	test.style.color = document.form1.tMauchu.value;
+	test.style.backgroundColor=document.form1.tMaunen.value;
+	//test.className = document.form1.sClass.value;
+	i = document.form1.sClass.selectedIndex;
+	test.className = document.form1.sClass[i].value;
+}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>Nội dung mới:
+    <input type="text" name="tNoidung" id="tNoidung" size="50" />
+  </p>
+  <p>Màu chữ:
+    <label for="tMauchu"></label>
+    <input type="text" name="tMauchu" id="tMauchu" />
+  </p>
+  <p>Màu nền:
+    <label for="tNoidung"></label>
+    <label for="tMaunen"></label>
+    <input type="text" name="tMaunen" id="tMaunen" />
+  </p>
+  <p>Class name: 
+    <label for="sClass"></label>
+    <select name="sClass" id="sClass">
+      <option value="class1">Lớp 1</option>
+      <option value="class2">Lớp 2</option>
+      <option value="class3">Lớp 3</option>
+    </select>
+  </p>
+  <p> 
+  <label for="ckDam">Chữ đậm</label>
+    <input type="checkbox" name="ckDam" id="ckDam" onclick="DamClick();" />
+    
+  </p>
+  <p> 
+  <label for="ckNghieng">Chữ Nghiêng</label>
+    <input type="checkbox" name="ckNghieng" id="ckNghieng" onclick="NghiengClick();" />
+    
+  </p>
+  <p>
+    <input type="button" name="b1" id="b1" 
+    value="Cập nhật" onclick="update();" />
+  </p>
+</form>
+<div id="test" class="class1" >NỘI DUNG CHƯA THAY ĐỔI</div>
+</body>
+</html>

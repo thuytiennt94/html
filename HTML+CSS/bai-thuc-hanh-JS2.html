@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Phương trình bậc 1</title>
+<link href="bai-thuc-hanh-JS2.css" rel="stylesheet" type="text/css" />
+<script>
+function cong(){
+	var so_a = document.getElementById("txtsoa").value;
+	var so_b = document.getElementById("txtsob").value;
+	var tong = parseInt(so_a) + parseInt(so_b);
+	//return tong;
+	document.getElementById("txtKQ").value = tong;
+}
+function tru(){
+	var so_a = document.getElementById("txtsoa").value;
+	var so_b = document.getElementById("txtsob").value;
+	var hieu = parseInt(so_a) - parseInt(so_b);
+	//return hieu;
+	document.getElementById("txtKQ").value = hieu;
+}
+function nhan(){
+	var so_a = document.getElementById("txtsoa").value;
+	var so_b = document.getElementById("txtsob").value;
+	var tich = parseInt(so_a) * parseInt(so_b);
+	//return tich;
+	document.getElementById("txtKQ").value = tich;
+}
+function chia(){
+	var so_a = document.getElementById("txtsoa").value;
+	var so_b = document.getElementById("txtsob").value;
+	var thuong = parseInt(so_a) / parseInt(so_b);
+	//return thuong;
+	document.getElementById("txtKQ").value = thuong;
+}
+function testA(){
+	document.getElementById("txtsoa").value = '';}
+function testB(){
+	document.getElementById("txtsob").value = '';}
+function Kiemtra(idtext, idloi)
+{
+	text = document.getElementById(idtext);
+	baoloi = document.getElementById(idloi);
+	if(text.value=="")
+	{
+		baoloi.innerHTML = "Bạn chưa nhập hệ số " + idtext;
+		baoloi.style.color = "red";
+		text.focus();//đặt con trỏ vào input
+		return false; //kết thúc
+	}
+	if(isNaN(text.value)==true)
+	{
+		baoloi.innerHTML = "Bạn phải nhập số";
+		baoloi.style.color = "red";
+		text.select();//đặt con trỏ vào bôi đen nội dung text
+		return false; //kết thúc
+	}
+	baoloi.innerHTML="";//xóa thông báo lỗi
+	return true;
+}
+</script>
+</head>
+
+<body>
+<div class="pt">
+<h2>Tính toán</h2>
+<form name="ptbac1" id="ptbac1" onsubmit="return ptbac()">
+	<p>Hệ số A= <input type="text" name="txtsoa" id="txtsoa" value="0" onclick="testA()" /> </p>
+	<p>Hệ số B= <input type="text" name="txtsob" id="txtsob" value="0" onclick="testB()"/> </p>
+	<input type="button" value="+" name="btnCong" class="btn" onclick="cong()" />
+	<input type="button" value="-" name="btnTru" class="btn" onclick="tru()" />
+	<input type="button" value="*" name="btnNhan" class="btn" onclick="nhan()"/>
+	<input type="button" value="/" name="btnChia" class="btn" onclick="chia()"/>
+	<p>Kết quả = <input type="text" name="txtKQ" id="txtKQ" /> </p>
+</form>
+</div>
+</body>
+</html>

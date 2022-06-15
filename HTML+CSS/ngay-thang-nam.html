@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bai1-Day/month/year</title>
+</head>
+
+<body>
+<h1>Ngày tháng năm</h1>
+<p id="day" style="color:#F00"></p>
+<p id="month" style="color:#F00"></p>
+<p id="test">Ngày này tuần trc là ngày: </p>
+<script>
+	var d = new Date();
+	
+	//var would = (d.getMonth() +1 )+ "/" + d.getDate() + "/" + d.getFullYear();
+	
+	var day = d.getDate();
+	var month = d.getMonth()+1;
+	var year = d.getFullYear();
+	
+	var would =  month + '/' + day + '/'+ year;
+	
+	var lastweek = day - 7;
+	document.getElementById("day").innerHTML = would;
+	document.getElementById("test").innerHTML + lastweek ;
+	
+</script>
+</body>
+</html>

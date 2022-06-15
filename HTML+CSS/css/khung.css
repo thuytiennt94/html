@@ -1,0 +1,139 @@
+.nav{
+	border:solid 2px #FF0000;
+	margin:0 auto;
+	width:1000px;
+	height:1400px;
+}
+.header{	
+	width:100%;
+	height:200px;
+	background-image:url(../images/banner-01.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.main{
+	background:#999;
+	color:#000;
+	float:left;
+	width:100%;
+	height:50px;
+}
+.mn{
+	list-style-type:none;	
+}
+.mn li{
+	float:left;
+	margin-left:0px;
+	line-height:20px;
+	position:relative; 	
+	margin:5px;
+	text-transform:uppercase;
+}
+.mn li a{
+	text-decoration:none;
+	color:#FFF;
+}
+.mn li a:hover{
+	background:#FFF;
+	color:#F00;
+	border:solid 1px #FF0000;
+	padding:10px;
+	border-radius:5px;
+	position:relative;
+}
+.main-menu{
+	background:#9C0;
+	width:150px;
+	border-radius:5px;
+	display:table;
+	float:left;
+	border:solid 1px #FF0000;
+	top:30px;
+	position:absolute;
+	visibility:hidden;
+}
+.main-menu li{
+	list-style-type:none;
+}
+.main-menu li a{
+	color:#FFF;
+	width:100px;
+}
+.main-menu li a:hover li{
+	visibility:visible;
+}
+.main-content{
+	float:left;
+}
+.main-content{
+	float:left;
+}
+.content-left{
+	float:left;
+	background:#069;
+	color:#FFF;
+	width:250px;
+	height:30px;
+	border-radius:5px;
+}
+.content{
+	float:left;
+	background:#63C;
+	color:#FFF;
+	border-radius:5px;
+	width:500px;
+	height:30px;
+	margin-top:10px;
+	text-transform:uppercase;
+	text-align:center;
+	padding-top:10px;
+}
+.content-right{
+	float:left;
+	background:#039;
+	color:#FFF;
+	width:250px;
+	height:30px;
+	text-align:center;
+	border-radius:5px;
+}
+.sanpham{
+	float:left;
+	width:500px;
+	margin-top:10px;
+}
+.sp{
+	width:150px;
+	border:dotted 1px #0099CC;
+	height:250px;
+	margin:7px;
+	float:left;
+}
+.sp:last-child {
+	margin-right: 0px;
+}
+.sp h3{
+	color:#C03;
+	text-align:center;
+}
+.sp img{
+	padding:10px;
+	max-height:130px;
+	max-width:100%;
+	vertical-align:middle;
+	box-sizing:border-box;
+}
+.sp p{
+	color:#90C;
+	text-align:center;
+}
+.footer{
+	background:#666;
+	height:100px;
+	color:#FFF;
+	clear:both;
+	text-align:center;
+	text-decoration:overline;
+	margin-top:auto;
+}
+

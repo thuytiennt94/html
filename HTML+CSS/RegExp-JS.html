@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RegExp</title>
+<script>
+	function kiemtra(){
+		hoten = document.getElementById("hoten");
+		loihoten = document.getElementById("loihoten");
+		rehoten = new RegExp();//lệnh khai báo biến kiểm regexp
+		rehoten = /^[a-zA-Z]+(\s[a-zA-Z]+){1,4}$/;
+		if(rehoten.test(hoten.value)==false){
+			loihoten.innerHTML = "Họ tên phải có từ 1 - 5 từ";
+			loihoten.style.color = "brown";
+			hoten.select();
+			return false;
+		}
+		loihoten.innerHTML = "OK";
+		loihoten.style.color = "red";
+		//kiểm tra số dt
+		dienthoai= document.getElementById("sdt");
+		loisdt = document.getElementById("loisdt");
+		resdt = new RegExp();//lệnh khai báo biến kiểm regexp
+		resdt = /^0[1-9]\d{8}$/;
+		if(resdt.test(dienthoai.value)==false){
+			loisdt.innerHTML = "0 -> 1 -> 8 số còn lại";
+			loisdt.style.color = "brown";
+			dienthoai.select();
+			return false;
+		}
+		loisdt.innerHTML = "OK";
+		loisdt.style.color = "red";
+		//kiểm tra mail
+		Email= document.getElementById("eamil");
+		loiEmail= document.getElementById("loieamil");
+		reEmail = new RegExp();//lệnh khai báo biến kiểm regexp
+		reEmail = /^\w+@\w+(\.\w+){1,3}$/;
+		if(reEmail.test(Email.value)==false){
+			loiemail.innerHTML = "abc@gmail.com.vn";
+			loiemail.style.color = "brown";
+			Email.select();
+			return false;
+		}
+		loiemail.innerHTML = "OK";
+		loiemail.style.color = "red";
+	}
+</script>
+</head>
+
+<body>
+	<h2>Kiểm tra Form</h2>
+	<form name="f1" id="f1">
+		<p>Họ và tên: <input type="text" name="hoten" id="hoten"/></p>
+		<div id="loihoten"></div>
+		<p>Số điện thoại: <input type="text" name="sdt" id="sdt" placeholder="nhập sdt"/></p>
+		<div id="loisdt"></div>
+		<p>Email: <input type="text" name="email" id="email"/></p>
+		<div id="loiemail"></div>
+		<p><input type="button" value="Kiểm tra" name="ktr" id="ktra" onclick="return kiemtra()" /></p>
+	</form>
+</body>
+</html>
